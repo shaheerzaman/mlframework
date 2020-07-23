@@ -10,7 +10,7 @@ import dispatcher
 TRAINING_DATA = '../input/train_folds.csv'
 TEST_DATA = '../input/test.csv'
 
-MODEL = 'randomforest'
+MODEL = 'extratrees'
 
 FOLD_MAPPING={
     0:[1, 2, 3, 4], 
@@ -62,9 +62,14 @@ def run(fold):
     return score
 
 if __name__ == '__main__':
-    fold1_score = run(fold=0)
-    # fold1_score = run(fold=1)
-    # fold1_score = run(fold=2)
+    #fold1_score = run(fold=0)
+    fold1_score = run(fold=1)
+    fold2_score = run(fold=2)
+    fold3_score = run(fold=3)
+    fold4_score = run(fold=4)
 
     print(f'Score for fold 1: {fold1_score}')
+    print(f'Score for fold 2: {fold1_score}')
+    print(f'Score for fold 3: {fold1_score}')
+    print(f'Score for fold 4: {fold1_score}')
 
